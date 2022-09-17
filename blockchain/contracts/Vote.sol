@@ -5,7 +5,6 @@ import "./V20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 struct Election {
-    uint256 voterAmount;
     uint256 candidateAmount;
     bytes32 merkleRoot;
     uint48 deadline;
@@ -24,7 +23,7 @@ contract Vote is Ownable {
     ) external onlyOwner {
         VoteToken vt = new VoteToken(voterAmount, root, deadline);
         elections.push(
-            Election(voterAmount, candidateAmount, root, deadline, vt)
+            Election(candidateAmount, root, deadline, vt)
         );
     }
 
@@ -38,5 +37,9 @@ contract Vote is Ownable {
 
         elections[id].voteToken.transferFrom(msg.sender, address(this), 1);
         votes[id][to]++;
+    }
+
+    function electionCount() external view returns(uint256){
+        return elections.length;
     }
 }
