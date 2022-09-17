@@ -23,7 +23,7 @@ contract VoteToken is ERC20 {
     }
 
     function claim(bytes32[] calldata merkleProof) external isDeadline {
-        bytes32 leafNode = keccak256(abi.encodePacked(msg.sender, "1"));
+        bytes32 leafNode = keccak256(abi.encodePacked(msg.sender));
         (bool v, uint256 i) = MerkleProof.verify(
             merkleProof,
             merkleRoot,
