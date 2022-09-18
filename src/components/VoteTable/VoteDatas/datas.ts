@@ -1,27 +1,27 @@
 export const DATAS = [
   {
     index: 0,
-    description: "Oylama 1 oylama 1",
-    options: ["Alim", "Sahin", "Kral"],
+    description: "Where should Devcon be held next year?",
+    options: ["#DevconIstanbul", "#DevconIstanbul", "#DevconIstanbul"],
   },
   {
     index: 1,
-    description: "Oylama 2 oylama 2",
-    options: ["Alim", "Sahin", "Kral"],
+    description: "How many ball are there in the ball pool?",
+    options: ["23445", "27289", "24421"],
   },
   {
     index: 2,
-    description: "Oylama 3 oylama 3",
-    options: ["Alim", "Sahin", "Kral"],
+    description: "Which one of your favourite number?",
+    options: ["2", "3", "6", "7", "9"],
   },
   {
     index: 3,
-    description: "Oylama 4 oylama 4",
-    options: ["Alim", "Sahin", "Kral"],
+    description: "What do you think?",
+    options: ["PoW ETH", "PoS ETH"],
   },
   {
     index: 4,
-    description: "Oylama 5 oylama 5",
-    options: ["Alim", "Sahin", "Kral"],
+    description: "Which one of your favorite blockchain?",
+    options: ["Ethereum", "Avalanche", "Polkadot", "Solana","Polygon","Cosmos"],
   },
 ];

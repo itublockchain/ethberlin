@@ -42,7 +42,7 @@ const MainPage = () => {
     fetchData().catch((err: any) => {
       console.log(err);
     });
-  }, []);
+  }, [modal.isOpen]);
 
   useEffect(() => {
     const fetchData = async () => {
