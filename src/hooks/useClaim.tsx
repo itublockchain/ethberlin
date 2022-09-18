@@ -63,9 +63,13 @@ export const useClaim = () => {
       );
 
       const x = await contract.balanceOf(account);
-      console.log(x)
+      if (x._hex === "0x01") {
+        return true;
+      } else {
+        return false;
+      }
     }
   };
 
-  return { claim, isClaimer };
+  return { claim, isClaimer, balanceOf };
 };
