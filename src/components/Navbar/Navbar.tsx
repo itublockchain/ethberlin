@@ -2,8 +2,7 @@ import styles from "./Navbar.module.scss";
 import { Button } from "ui/Button/Button";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import { useTheme } from "hooks/useTheme";
-import LOGO from "assets/logo.png";
-// import LOGO from "assets/logo-for-light.png";
+import LOGO from "assets/logo2.png";
 import { useAccount } from "hooks/useAccount";
 import { useSelector } from "react-redux";
 import { RootState } from "store";
@@ -11,7 +10,6 @@ import { useEffect } from "react";
 import { parseAddress } from "utils/parseAddress";
 
 const Navbar = () => {
-  const { toggleTheme, theme } = useTheme();
   const { connectAccount } = useAccount();
   const account = useSelector((state: RootState) => state.account.account);
   useEffect(() => {

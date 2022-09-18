@@ -26,7 +26,7 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
     };
 
     setLoading(true);
-    setTimeout(endLoading(MOCK_PROOF), 3000);
+    setTimeout(endLoading(MOCK_PROOF), 8000);
   };
 
   return (
@@ -76,7 +76,7 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
             Get Privacy
           </Button>
         )}
-        <p>{privacyMsg}</p> 
+        <p>{privacyMsg}</p>
       </div>
     </Modal>
   );

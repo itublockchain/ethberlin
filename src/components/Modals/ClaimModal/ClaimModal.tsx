@@ -40,40 +40,36 @@ const ClaimModal = ({ modal }: { modal: ModalController }) => {
       </div>
 
       <div className={styles.buttons}>
-        {isWL ? (
-          <Button
-            className={styles.swap}
-            color="black"
-            width={"170px"}
-            height="45px"
-            fontWeight="fw800"
-            onClick={() => {
-              claim(voteModalDatas.index);
-            }}
-          >
-            Claim
-          </Button>
-        ) : (
-          <Button
-            className={styles.swap}
-            color="black"
-            width={"170px"}
-            height="45px"
-            fontWeight="fw800"
-            onClick={() => {}}
-          >
-            Claim By Proof
-          </Button>
-        )}
+        <Button
+          className={styles.swap}
+          color="black"
+          width={"170px"}
+          height="45px"
+          fontWeight="fw800"
+          onClick={() => {
+            claim(voteModalDatas.index);
+          }}
+        >
+          Claim
+        </Button>
+
+        <Button
+          className={styles.swap}
+          color="black"
+          width={"170px"}
+          height="45px"
+          fontWeight="fw800"
+          onClick={() => {}}
+        >
+          Claim By Proof
+        </Button>
       </div>
-      {!isWhiteListed && (
-        <div className={styles.input}>
-          <input
-            placeholder="Please enter your proof!"
-            className={styles.inputTag}
-          ></input>
-        </div>
-      )}
+      <div className={styles.input}>
+        <input
+          placeholder="Please enter your proof!"
+          className={styles.inputTag}
+        ></input>
+      </div>
     </Modal>
   );
 };
