@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^3.4.1",
+    "assert": "^2.0.0",
     "circom": "0.0.35",
     "circomlib": "../circomlib",
     "dotenv": "^16.0.2",
+    "fixed-merkle-tree": "../fixed-merkle-tree",
     "snarkjs": "../snarkjs",
     "websnark": "../websnark"
   },

@@ -77,7 +77,7 @@ async function deposit({ mixer, currency, amount }) {
   commitment = toHex(deposit.commitment);
 
   console.log(commitment)
-  return
+  return deposit
 
   console.log("Submitting deposit transaction");
   const tx = await mixer.deposit(commitment);
@@ -105,10 +105,11 @@ async function main() {
   const token = new hre.ethers.Contract(token_address, token_abi, wallet);
 
   const mixer_abi = ["function deposit(bytes32 _commitment) external payable"];
-  const mixer_address = "0x4Ca6537DE10B87A620188a71F1309311c66e1dCe";
+  const mixer_address = "0x4ca6537de10b87a620188a71f1309311c66e1dce";
   const mixer = new hre.ethers.Contract(mixer_address, mixer_abi, wallet);
 
-  await deposit({ mixer, currency: "test", amount: 1 });
+  const d = await deposit({ mixer, currency: "test", amount: 1 });
+  console.log(d);
   return;
   await token.mint(wallet.address, "1");
   await token.approve(mixer.address, "1");
