@@ -13,7 +13,7 @@ struct Election {
 
 contract Vote is Ownable {
     Election[] public elections;
-    mapping(uint256 => uint256[]) public votes;
+    mapping(uint256 => mapping (uint256 => uint256)) public votes;
 
     function createElection(
         uint256 voterAmount,
