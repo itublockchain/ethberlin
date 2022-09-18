@@ -1,0 +1,144 @@
+.wrapper {
+    display: flex;
+    border: 1px solid var(--global-3);
+    border-radius: 25px;
+    margin-left: 40px;
+    background-color: var(--global-5);
+    gap: 1px;
+
+    .selected {
+        background-color: var(--global-2);
+        color: var(--global-4);
+        // transition: ease-out 0.5s;
+        position: relative;
+        border: 0px;
+        width: 100px;
+        animation: 1s buttonBackground1 linear;
+
+
+        .toRight {
+            width: 0px;
+            height: 45px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: 1s;
+            // animation: buttonChanger1 1s linear;
+        }
+
+        .toLeft {
+            width: 0px;
+            height: 45px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            transition: 1s;
+            animation: buttonChanger1 1s linear;
+            border-radius: 25px;
+        }
+    }
+
+    .not {
+        color: var(--global-4);
+        background-color: var(--global-5);
+        border: 0px solid red !important;
+        // transition: ease-out 1.3s;
+        width: 100px;
+        position: relative;
+        border: 0px;
+
+        .toRight {
+            width: 0px;
+            height: 45px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: 1s;
+            // animation: buttonChanger2 1s linear;
+        }
+
+        .toLeft {
+            width: 0px;
+            height: 45px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: 1s;
+            animation: buttonChanger2 1s linear;
+            border-radius: 25px;
+        }
+
+    }
+}
+
+@keyframes buttonChanger1 {
+    0% {
+        background-color: var(--global-2);
+        width: 0px;
+        height: 45px;
+        border-radius: 25px 0px 0px 25px;
+    }
+
+    100% {
+        width: 100px;
+        height: 45px;
+        background-color: var(--global-2);
+    }
+}
+
+
+@keyframes buttonChanger2 {
+    0% {
+        background-color: var(--global-2);
+        width: 100px;
+        border-radius: 0px  25px 25px 0px;
+    }
+
+    100% {
+        width: 0px;
+        background-color: var(--global-2);
+    }
+}
+
+@keyframes buttonChanger3 {
+    0% {
+        background-color: var(--global-2);
+        width: 0px;
+    }
+
+
+
+    100% {
+        width: 100px;
+        background-color: var(--global-2);
+    }
+}
+
+
+@keyframes buttonChanger4 {
+    0% {
+        background-color: var(--global-2);
+        width: 100px;
+    }
+
+    100% {
+        width: 0px;
+        background-color: var(--global-2);
+    }
+}
+
+
+
+@keyframes buttonBackground1 {
+    0% {
+        background-color: var(--global-3);
+    }
+
+    100% {
+        background-color: var(--global-3);
+    }
+}

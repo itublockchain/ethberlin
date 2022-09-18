@@ -1,0 +1,51 @@
+body.light {
+  // Global
+  --body-bg-1: #F9F9F9;
+  --text-1: black;
+  --global-1: #a0ffe3;
+  --global-2: #65dc98;
+  --global-3: #8d8980;
+  --global-4: #575267;
+  --global-5: #10101f;
+  --global-6: rgba(16, 16, 31, 0.65);
+
+
+  // Navbar
+
+    // Modal
+    --modal-bg: red;
+    --close-bg: black;
+    --close-icon: #545454;
+
+}
+
+body.dark {
+  // Misc
+  --body-bg-1: #0E2038;
+  --text-1: white;
+  --global-1: #a0ffe3;
+  --global-2: #65dc98;
+  --global-3: #8d8980;
+  --global-4: #575267;
+  --global-5: #10101f;
+  --global-6: rgba(16, 16, 31, 0.65);
+
+  // Navbar
+
+    // Modal
+    --modal-bg: #232323;
+    --close-bg: black;
+    --close-icon: #545454;
+}
+
+.link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}

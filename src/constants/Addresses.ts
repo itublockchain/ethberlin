@@ -1,0 +1,3 @@
+export const ADDRESSES = {
+  helloWorld: "0xa249D6997f462D0708B2E9dc0E7fa6322f5A54C8"
+}

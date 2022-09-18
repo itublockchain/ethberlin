@@ -1,0 +1,10 @@
+.wrapper {
+    max-width: 1025px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+}

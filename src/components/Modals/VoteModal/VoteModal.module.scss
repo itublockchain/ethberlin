@@ -1,0 +1,50 @@
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+
+    .description {
+        height: 50px;
+        margin: 10px 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Helvetica Neue';
+        font-family: "Exan";
+        max-width: 590px;
+        border-radius: 10px;
+        font-weight: 300;
+        width: 100%;
+        border: 1px solid var(--global-4);
+        background-color: var(--global-5);
+        color: var(--global-1);
+    }
+
+    .candidates {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 300px;
+        width: 100%;
+
+        .option{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0px;
+        }
+    }
+
+    .warning{
+        margin: 20px 0px;
+        font-family: "Exan";
+    }
+
+    .buttons{
+        display: flex;
+        gap: 30px;
+    }
+}

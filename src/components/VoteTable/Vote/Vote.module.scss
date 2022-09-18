@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--global-1);
+    padding: 15px 10px;
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            div {
+
+                // font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-family: 'Helvetica Neue';
+                font-size: 14px;
+                font-weight: 300;
+                color: var(--global-1);
+            }
+
+            img {
+                border-radius: 50%;
+                width: 35px;
+            }
+        }
+
+    }
+
+    .description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Helvetica Neue';
+        max-width: 590px;
+        border-radius: 10px;
+        font-weight: 300;
+        width: 100%;
+        border: 1px solid var(--global-4);
+        background-color: var(--global-5);
+        color: var(--global-1);
+    }
+}

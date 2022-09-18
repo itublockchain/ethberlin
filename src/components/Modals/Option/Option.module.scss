@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 20px;
+    margin: 10px 0px;
+
+    .info{
+        font-family: "Exan";
+    }
+
+    .choose{
+        .thisOne{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid var(--global-4);
+            padding: 5px;
+            background-color: var(--global-2);
+        }
+
+
+        .otherOne{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid var(--global-4);
+        }
+    }
+}
