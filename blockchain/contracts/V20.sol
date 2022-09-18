@@ -34,7 +34,26 @@ contract VoteToken is ERC20 {
         require(!claimed.get(i), "Already minted.");
         claimed.set(i);
 
-        transfer(msg.sender, 1);
+        _transfer(address(this), msg.sender, 1);
+    }
+
+    function findIndex(bytes32[] calldata _merkleProof)
+        external
+        view
+        returns (uint256)
+    {
+        bytes32 leaf = keccak256(abi.encodePacked(msg.sender));
+        (bool v, uint256 i) = MerkleProof.verify(
+            _merkleProof,
+            merkleRoot,
+            leaf
+        );
+        require(v, "Not matching request.");
+        return i;
+    }
+
+    function checkDistributed(uint256 _i) public view returns (bool) {
+        return claimed.get(_i);
     }
 
     function decimals() public pure override returns (uint8) {
