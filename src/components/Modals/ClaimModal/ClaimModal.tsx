@@ -16,13 +16,6 @@ const ClaimModal = ({ modal }: { modal: ModalController }) => {
     (state: any) => state.account.voteModalDatas
   );
 
-  // useEffect(() => {
-  //   const getRight = async () => {
-  //     var data = await isClaimer();
-  //     setClaimer(data);
-  //   };
-  //   getRight();
-  // }, [account]);
   return (
     <Modal isOpen={modal.isOpen} close={modal.close} className={styles.wrapper}>
       <div className={styles.description}>{voteModalDatas.description}</div>

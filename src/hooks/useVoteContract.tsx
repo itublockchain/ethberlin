@@ -9,6 +9,7 @@ import { setVoteDatas } from "store/slicers/account";
 export const useVoteContract = () => {
   const dispatch = useDispatch();
   const account = useSelector((state: RootState) => state.account.account);
+
   const voteElection = async (_id: number, _to: number) => {
     if (account === null) {
       return;
@@ -16,11 +17,10 @@ export const useVoteContract = () => {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
-        ADDRESSES.VoteContract,
+        ADDRESSES.VoteTokenContracts[_id],
         VoteContractABI,
         signer
       );
-
       await contract.voteElection(_id, _to);
     }
   };

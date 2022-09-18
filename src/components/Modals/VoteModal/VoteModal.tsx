@@ -15,30 +15,17 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
     <Modal isOpen={modal.isOpen} close={modal.close} className={styles.wrapper}>
       <div className={styles.description}>{voteModalDatas.description}</div>
       <div className={styles.candidates}>
-        <Option
-          info="Vitalik Buterin"
-          index={0}
-          selected={selected}
-          setSelected={setSelected}
-        />
-        <Option
-          info="Gavin Wood"
-          index={1}
-          selected={selected}
-          setSelected={setSelected}
-        />
-        <Option
-          info="Alim Sahin"
-          index={2}
-          selected={selected}
-          setSelected={setSelected}
-        />
-        <Option
-          info="Kemal Kilicdaroglu"
-          index={3}
-          selected={selected}
-          setSelected={setSelected}
-        />
+        {voteModalDatas.options.map((data: any, i: number) => {
+          return (
+            <Option
+              key={i}
+              info={data}
+              index={i}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          );
+        })}
       </div>
 
       <div className={styles.warning}>You have a vote token to claim!</div>
@@ -51,7 +38,7 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
           height="45px"
           fontWeight="fw800"
           onClick={() => {
-            voteElection(selected, selected); // update params
+            voteElection(voteModalDatas.index, selected); // update params
           }}
         >
           Send Vote
