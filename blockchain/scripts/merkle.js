@@ -14,6 +14,10 @@ const rootHash = merkleTree.getHexRoot();
 
 console.log(rootHash)
 
-for(let i = 0; i < 5; i++) {
-    console.log(merkleTree.getHexProof(leafNodes[i]));
+const obj = {}
+
+for(let i = 0; i < 1000; i++) {
+    obj[data[i].address] = merkleTree.getHexProof(ethers.utils.solidityKeccak256(["address"], [data[i].address]));
 }
+
+fs.writeFileSync("proofs.json", JSON.stringify(obj))
