@@ -7,6 +7,8 @@ import { useVoteContract } from "hooks/useVoteContract";
 import { useSelector } from "react-redux";
 import { Spinner } from "ui/Spinner/Spinner";
 
+const MOCK_PROOF = "0x1a743d773383b9ee57e11105b3a19c992c17095ccbb2d4b107248eeb17f433f30ebf6e33704c878decb41d4871710bd85ec28f77056df40a4d648a69c7d7";
+
 const VoteModal = ({ modal }: { modal: ModalController }) => {
   const [selected, setSelected] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
@@ -24,7 +26,7 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
     };
 
     setLoading(true);
-    setTimeout(endLoading("0xDEADBEEF"), 3000);
+    setTimeout(endLoading(MOCK_PROOF), 3000);
   };
 
   return (
