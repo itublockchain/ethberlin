@@ -21,7 +21,7 @@ contract Vote is Ownable {
         uint48 deadline,
         bytes32 root
     ) external onlyOwner {
-        VoteToken vt = new VoteToken(voterAmount, root, deadline);
+        VoteToken vt = new VoteToken(voterAmount, root, deadline, address(this));
         elections.push(
             Election(candidateAmount, root, deadline, vt)
         );

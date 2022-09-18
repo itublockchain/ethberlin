@@ -9,17 +9,20 @@ contract VoteToken is ERC20 {
     using BitMaps for BitMaps.BitMap;
 
     bytes32 public merkleRoot;
+    address public voteContract;
     uint48 public claimDeadline;
     BitMaps.BitMap private claimed;
 
     constructor(
         uint256 voterAmount,
         bytes32 root,
-        uint48 deadline
+        uint48 deadline,
+        address _voteContract
     ) ERC20("VoteToken", "VT") {
         mint(address(this), voterAmount);
         merkleRoot = root;
         claimDeadline = deadline;
+        voteContract = _voteContract;
     }
 
     function claim(bytes32[] calldata merkleProof) external isDeadline {
@@ -58,6 +61,20 @@ contract VoteToken is ERC20 {
 
     function decimals() public pure override returns (uint8) {
         return 0;
+    }
+
+    function _spendAllowance(
+        address owner,
+        address spender,
+        uint256 amount
+    ) internal virtual override {
+        uint256 currentAllowance = allowance(owner, spender);
+        if ((currentAllowance != type(uint256).max) || spender != voteContract) {
+            require(currentAllowance >= amount, "ERC20: insufficient allowance");
+            unchecked {
+                _approve(owner, spender, currentAllowance - amount);
+            }
+        }
     }
 
     function mint(address to, uint256 amount) private {
