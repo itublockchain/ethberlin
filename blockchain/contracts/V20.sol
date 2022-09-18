@@ -34,7 +34,7 @@ contract VoteToken is ERC20 {
         require(!claimed.get(i), "Already minted.");
         claimed.set(i);
 
-        transfer(msg.sender, 1);
+        _transfer(address(this), msg.sender, 1);
     }
 
     function findIndex(bytes32[] calldata _merkleProof)
