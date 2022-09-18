@@ -9,6 +9,8 @@ import {
 } from "components";
 import { useModal } from "hooks/useModal";
 import { useEffect, useState } from "react";
+import { useClaim } from "hooks/useClaim";
+import { useVoteContract } from "hooks/useVoteContract";
 
 enum WHICHMODAL {
   "CLAIM",
@@ -19,6 +21,8 @@ const MainPage = () => {
   const modal = useModal();
   const [whichModal, setWhichModal] = useState<WHICHMODAL>(WHICHMODAL.CLAIM);
   const [opening, setOpening] = useState(true);
+// const {balanceOf} = useVoteContract();
+//   useEffect(()=> {},[])
 
   useEffect(() => {
     setTimeout(() => {

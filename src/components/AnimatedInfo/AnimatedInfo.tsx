@@ -5,40 +5,40 @@ const AnimatedInfo = () => {
     <div className={styles.wrapper}>
       <div className={styles.marquee}>
         <ul className={styles.list}>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
         </ul>
       </div>
       <div className={styles.marquee}>
         <ul className={styles.list}>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
-          <li>&nbsp;Voting!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
+          <li>&nbsp;VQt!ng!&nbsp; </li>
           <li>&nbsp;Dumbra!&nbsp; </li>
-          <li>&nbsp;Privacy!&nbsp; </li>
+          <li>&nbsp;Pr!v?cy!&nbsp; </li>
         </ul>
       </div>
       {/* <div className={styles.text1}>

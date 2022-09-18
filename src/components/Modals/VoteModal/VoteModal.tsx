@@ -3,13 +3,17 @@ import { ModalController } from "hooks/useModal";
 import { Modal, Button } from "ui";
 import { Option } from "components";
 import { useState } from "react";
+import { useVoteContract } from "hooks/useVoteContract";
+import { useSelector } from "react-redux";
 const VoteModal = ({ modal }: { modal: ModalController }) => {
   const [selected, setSelected] = useState<number>(0);
+  const { voteElection } = useVoteContract();
+  const voteModalDatas = useSelector(
+    (state: any) => state.account.voteModalDatas
+  );
   return (
     <Modal isOpen={modal.isOpen} close={modal.close} className={styles.wrapper}>
-      <div className={styles.description}>
-        There are some voting description here!
-      </div>
+      <div className={styles.description}>{voteModalDatas.description}</div>
       <div className={styles.candidates}>
         <Option
           info="Vitalik Buterin"
@@ -46,7 +50,9 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
           width={"170px"}
           height="45px"
           fontWeight="fw800"
-          onClick={() => {}}
+          onClick={() => {
+            voteElection(selected, selected); // update params
+          }}
         >
           Send Vote
         </Button>
