@@ -9,3 +9,4 @@ export { CreateVote } from "./VoteTable/CreateVote/CreateVote";
 export { ClaimModal } from "./Modals/ClaimModal/ClaimModal";
 export { VoteModal } from "./Modals/VoteModal/VoteModal";
 export { Option } from "./Modals/Option/Option";
+export { Opening } from "./Opening/Opening";
