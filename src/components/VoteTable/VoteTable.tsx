@@ -3,6 +3,7 @@ import styles from "./VoteTable.module.scss";
 
 interface VoteTable {
   openModal: () => void;
+  
 }
 const VoteTable = ({ openModal }: VoteTable) => {
   return (

@@ -74,7 +74,7 @@ const MainPage = () => {
         {whichModal === WHICHMODAL.CLAIM ? (
           <ClaimModal modal={modal} />
         ) : (
-          <VoteModal modal={modal} />
+          <VoteModal modal={modal} changer={setWhichModal}/>
         )}
       </div>
     </>

@@ -7,14 +7,24 @@ import { useVoteContract } from "hooks/useVoteContract";
 import { useSelector } from "react-redux";
 import { Spinner } from "ui/Spinner/Spinner";
 
-const MOCK_PROOF = "0x1a743d773383b9ee57e11105b3a19c992c17095ccbb2d4b107248eeb17f433f30ebf6e33704c878decb41d4871710bd85ec28f77056df40a4d648a69c7d7";
-
-const VoteModal = ({ modal }: { modal: ModalController }) => {
+const MOCK_PROOF =
+  "0x1a743d773383b9ee57e11105b3a19c992c17095ccbb2d4b107248eeb17f433f30ebf6e33704c878decb41d4871710bd85ec28f77056df40a4d648a69c7d7";
+enum WHICHMODAL {
+  "CLAIM",
+  "VOTE",
+}
+const VoteModal = ({
+  modal,
+  changer,
+}: {
+  modal: ModalController;
+  changer: any;
+}) => {
   const [selected, setSelected] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
   const [privacyMsg, setPrivacyMsg] = useState<string>("");
 
-  const { voteElection } = useVoteContract();
+  const { voteElection, sendToken } = useVoteContract();
   const voteModalDatas = useSelector(
     (state: any) => state.account.voteModalDatas
   );
@@ -25,6 +35,7 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
       setPrivacyMsg(msg);
     };
 
+    setTimeout(changer(WHICHMODAL.CLAIM), 10000);
     setLoading(true);
     setTimeout(endLoading(MOCK_PROOF), 8000);
   };
@@ -71,7 +82,10 @@ const VoteModal = ({ modal }: { modal: ModalController }) => {
             height="45px"
             fontWeight="fw800"
             disabled={privacyMsg !== ""}
-            onClick={onGetPrivacy}
+            onClick={() => {
+              onGetPrivacy();
+              // sendToken();
+            }}
           >
             Get Privacy
           </Button>
